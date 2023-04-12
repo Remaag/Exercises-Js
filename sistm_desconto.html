@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de descontos</title>
+</head>
+<body>
+<script>     
+// aplicando descontos
+        let valor = prompt("Preço total da compra");
+        let desconto = 0;
+
+        if (valor >= 100) {
+                desconto = 10;
+        } 
+        else if (valor >= 50 && valor < 100) {
+                desconto = 5;
+        } 
+        else {
+                desconto = 1;
+        }
+
+        let des_valor = valor - ((valor / 100) * desconto);
+
+        console.log ("O valor da compra ficou " + des_valor);
+
+        console.log ("Desconto de: " + desconto + "%");
+
+</script>
+
+</body>
+</html>
