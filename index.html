@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibindo variavel na pagina</title>
+</head>
+<body>
+    <p id="nome"></p>
+    <h1 id="idade"></h1>
+    <h1 id="soma"></h1>
+    <h1 id="div"></h1>
+    <h1 id="sub"></h1>
+    <h1 id="multi"></h1>
+
+<script>
+        /*
+        //exibindo variaveis
+                let nome = "Jonas";
+
+                console.log (nome);
+
+                alert (nome);
+
+                document.getElementById ("nome").innerHTML = nome;
+
+        // exibindo variaves concatenizadas
+                var idade = 19;
+
+                console.log (idade + " " + "anos");
+
+                alert (idade + " anos");
+
+                document.getElementById ("idade").innerHTML = idade + " anos";
+
+        // exibindo soma de variaveis 
+                let number1 = 10;
+                let number2 = 2;
+
+                let soma = number1 + number2;
+                let div = number1 / number2;
+                let sub = number1 - number2;
+                let multi = number1 * number2;
+                
+                console.log ("soma= " + soma);
+                console.log ("divisão= " + div);
+                console.log ("subtração= " +sub);
+                console.log ("multiplicação= " + multi);
+
+                alert ("soma= " + soma);
+                alert ("divisão= " + div);
+                alert ("subtração= " + sub);
+                alert ("multiplicação= " + multi);
+
+                document.getElementById ("soma").innerHTML = "soma= " + soma;
+                document.getElementById ("div").innerHTML = "divisão= " + div;
+                document.getElementById ("sub").innerHTML = "subtração= " + sub;
+                document.getElementById ("multi").innerHTML = "multiplcação= " + multi;
+        */      
+        // exibindo calculo imc
+        /*
+                let peso = prompt("Digite seu peso");
+                let altura = prompt("Digite sua altura 'colocar ponto'");
+
+                let imc = peso / (altura * altura);
+
+                console.log("imc= " + imc.toFixed(1));
+        */
+        //Sistema de idade
+        /*
+        let idade = prompt ("Qual sua idade?");
+
+        if ( idade < 18) 
+        {
+                console.log ("Você é menor de idade e não tem permissão de entrar na festa.");
+        }
+        else {
+                console.log ("Você é de maior de idade, seja Bem-vindo a la fiesta.");
+        }
+        if  (idade > 95){
+                console.log ( idade + " anos?? Rainha Elizabeth é você?");
+        }
+        */
+
+// sistema de notas
+/* 
+        // let aluno = prompt ("Nome do aluno");
+        let nota1 = prompt ("Nota de Portugês");
+
+        if (nota1 >= 7 && nota1 <= 10) {
+
+                console.log ("Aprovado");
+        } 
+        else if (nota1 < 7 && nota1 >= 5) {
+
+             console.log ("Recuperação"); 
+        } else if (nota1 => 11 || nota1 < 0) {
+
+                console.log ("Nota inexistente")
+        }
+        else {
+                
+                console.log ("Reprovado");
+        }
+*/
+
+// sistema de fahrenheint
+/*
+        let celcius = prompt ("Temperatura em Celcius");
+        let fahr = 1.8 * celcius + 32;
+
+        console.log ("A temperatura em Fahrenheit é " + Math.round(fahr) + " °F");
+*/
+// aplicando descontos
+/*
+let valor = prompt("Preço total da compra");
+let desconto = 0;
+
+if (valor >= 100) {
+        desconto = 10;
+} 
+else if (valor >= 50 && valor < 100) {
+         desconto = 5;
+} 
+else {
+        desconto = 1;
+}
+
+let des_valor = valor - ((valor / 100) * desconto);
+
+console.log ("O valor da compra ficou " + des_valor);
+
+console.log ("Desconto de: " + desconto + "%");
+*/
+</script>
+
+</body>
+</html>
