@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<style>
+    body {
+        background-color: black;
+    }
+
+</style>
+
+<script>
+// Sistema de desconto co cliente
+    let valor = prompt ("Valor total da compra");
+    let cliente = prompt ("Qual o tipo do cliente: padrão, premium ou vip?");
+    let desconto;
+
+    switch (cliente) {
+        case "padrão":
+            desconto = 10;
+        break
+        case "premium":
+            desconto = 20;
+        break
+        case "vip":
+            desconto = 30;
+        break
+        default:
+            desconto = false;
+        break
+    }
+
+    let des_valor = valor - ((valor / 100) * desconto);
+
+    
+    
+    if (desconto == false) {
+        alert ("por favor informar um tipo de cliente válido");
+    } else {
+        alert ("Sua compra de " + valor + " ficou por " + des_valor + ", graças ao seu cliente tipo " + cliente + " que concede " + desconto + "% de desconto.");
+    }
+    
+
+</script>

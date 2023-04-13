@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculador de pontuação</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    let dificult = prompt ("Dificuldade: fácil, médio, difícil");
+    let pontuacao = prompt ("Pontuação ganha");
+    let mod;
+
+    switch (dificult) {
+        case (("fácil") && ("facil")):
+            mod = 1;
+        break;
+
+        case "médio" && "medio":
+            mod = 2;
+        break;
+
+        case "difícil" && "dificil":
+            mod = 3;
+        break;
+        default:
+            mod = 0;
+        break;
+    }
+
+    let pontuacaoFinal = (mod * pontuacao);
+
+    if (mod == 0) {
+        alert ("Algo de errado não está certo aqui");
+    } else {
+        alert ("Sua pontuação jogando no modo " + dificult + " foi de: " + pontuacaoFinal);
+    }
+
+    
+
+    
+</script>
