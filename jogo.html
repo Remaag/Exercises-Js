@@ -13,7 +13,7 @@
 
 <script>
     let dificult = prompt ("Dificuldade: fácil, médio, difícil");
-    let pontuacao = prompt ("Pontuação ganha");
+    let pontuacao = parseInt(prompt ("Pontuação ganha"));
     let mod;
 
     switch (dificult) {
@@ -36,12 +36,13 @@
     let pontuacaoFinal = (mod * pontuacao);
 
     if (mod == 0) {
-        alert ("Algo de errado não está certo aqui");
+        alert ("A dificuldade " + dificult + " não é válida");
     } else {
         alert ("Sua pontuação jogando no modo " + dificult + " foi de: " + pontuacaoFinal);
     }
 
-    
-
+    if (pontuacao != Number.isInteger) {
+        alert ("Numero" + pontuacao + "inválido");
+    }
     
 </script>
