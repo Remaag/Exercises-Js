@@ -12,11 +12,12 @@
 </html>
 
 <script>
-    let dificult = prompt ("Dificuldade: fácil, médio, difícil");
-    let pontuacao = parseInt(prompt ("Pontuação ganha"));
-    let mod;
+// fazendo um sistema que multiplica os pontos dependendo da dificuldade
+    let dificult = prompt ("Dificuldade: fácil, médio, difícil");                                                               // variavel caixa de dialogo para indicar a dificuldade
+    let pontuacao = parseInt(prompt ("Pontuação ganha"));                                                                       // variavel caixa de dialogo para pegar a pontuação
+    let mod;                                                                                                                    // variavel para o modificador de dificuldade
 
-    switch (dificult) {
+    switch (dificult) {                                                                                                         // switch para saber qual dificuldade foi informada no prompt
         case (("fácil") && ("facil")):
             mod = 1;
         break;
@@ -33,7 +34,7 @@
         break;
     }
 
-    let pontuacaoFinal = (mod * pontuacao);
+    let pontuacaoFinal = (mod * pontuacao);                                                                                     // variavel para calcular a pontuação final
 
     if (mod == 0) {
         alert ("A dificuldade " + dificult + " não é válida");
