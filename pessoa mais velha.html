@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem é mais velho?</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<style>
+    body {
+        background-color: rgb(29, 28, 28);
+    }
+</style>
+
+<script>
+// fazendo um comparador de idade 
+    let nome;
+    let pessoaMaisVelha;
+    let idade = 0;
+    let maiorIdade = 0;
+    let i = 0;
+
+    do {
+        nome = prompt ("Digite o nome de uma pessoa");
+        idade = prompt ("Digite a idade desta pessoa");
+
+        if (idade > maiorIdade) {
+            maiorIdade = idade;
+            pessoaMaisVelha = nome;
+        }
+
+        i ++;
+    } while (i < 5){
+        alert(`${pessoaMaisVelha} tem ${maiorIdade} anos, logo tem a maior idade.`);
+    }
+
+
+
+
+</script>
