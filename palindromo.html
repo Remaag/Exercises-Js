@@ -12,6 +12,13 @@
 </html>
 
 <script>
+let palavra = prompt ("Digite uma palavra para verificar se é um palíndromo");
+let palavraInvertida = palavra.split('').reverse().join('');
+
+if (palavra == palavraInvertida) {
+    alert (`${palavra} é um palíndormo!`);
+} else 
+    alert (`${palavra} não é um palíndromo`);
 
     
 </script>
