@@ -19,29 +19,57 @@
 
 <Script>
 // fazendo um joguinho da forca muito massa
-    let palavraSecreta = toUpperCase(prompt (`Digite aqui a palavra da vez.`));
-    let tamPalavra = palavraSecreta.length;                     // length = vai separar os caracteres da variavel e transformar em uma qunatidade
-    let chutes;
-    let erros;
-    let acertos;
-    let tentativas;
-    let maxTentativas = 6;
+    let palavraSecreta = prompt (`Digite aqui a palavra da vez.`).toUpperCase();
+    let tamPalavra = palavraSecreta.length;                     // length = vai separar os caracteres da variavel e transformar em uma quantidade
+    let chutes = "";
+    let erros = "";
+    let acertos = "";
+// numero de tentativas
+    let tentativas = 0;
+    const maxTentativas = 6;                                    // const = tipo de variavel não alteravel, somente pelo javascript
 
-    for (tentativass; tentativas ) {
-        
+// criando o underline
+    for (let i = 0; i < tamPalavra; i++) {
+        acertos += "_";
     }
 
-    while (tentativa < maxTentativas) {
-        chutes = toUpperCase (prompt (`Insira uma letra`));
-        if (tentativa == chutes) {
-            prompt (`A letra ${tentativa} já foi usada, tente outra.`);
-        } else {
-
+    while (tentativas < maxTentativas) {
+    // exibindo informações para o jogador e pedindo que ele chute uma letra
+        let letraChutada = prompt (`Palavra: ${acertos} \n Tentativas: ${tentativas}/${maxTentativas} \n Letras já chutadas: ${chutes} \n Letras erradas: ${erros} \n Digite uma letra:`).toUpperCase();
+    
+    // verificando se a letra já foi chutada anteriormente
+        if (chutes.includes(letraChutada) || erros.includes(letraChutada) || acertos.includes(letraChutada)) {
+            alert (`Você já chutou a letra ${letraChutada}`);
         }
+
+    // verificando se a palavra chutadq está na palavra secreta
+        if (palavraSecreta.includes(letraChutada)) {
+            for ( i = 0; i < tamPalavra; i++) {
+                if (palavraSecreta [i] === letraChutada) {
+                    acertos = acertos.substr(0, i) + letraChutada + acertos.substr (i + 1);
+                    chutes += letraChutada;
+                }
+            }
+        }
+
+        if (acertos === palavraSecreta) {
+            alert (`Parabéns! Você acertou a palavra secreta ${palavraSecreta} com ${tentativas} tentativas.`);
+        break;
+        } else {
+            erros += letraChutada;
+            tentativas++;
+        }
+
+        if (tentativas === maxTentativas) {
+            alert(`Game Over! A palavra secreta era ${palavraSecreta}`);
+        }
+
     }
 
 
 
-    console.log (string);
+// verificar se todas as letras já foram chutadas 
+
+// adicionar a letra chutada pelo jogador
 
 </Script>
