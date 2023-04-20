@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+// criando as variaveis
+    let estoque = [];                                                                       //array para armazenar os itens do estoque
+
+    while (true) {                                                                          // fazendo o looping ser infinito dizendo que ele é verdadeiro
+        let opicao = prompt ("Escolha uma das seguites opções: \n 1 - Adicionar um novo item. \n 2 - Remover um item. \n 3 - Exibir lista de items. \n 4 - Sair.");
+
+        if (opicao === "1") {                                                               // adicionando um novo item ao estoque
+            let novoItem = prompt("Digite o nome do item que deseja adiconar ao estoque");
+            estoque.push(novoItem);
+            alert (`O item "${novoItem}" foi adicionado ao estoque.`);
+                                                                                            // mostrando a lista de item do estoque com forEach(
+        } else if (opicao === "2") {                                                        // remove um item do estoque  com o splice()
+            let removeItem = prompt ("Digite o nome do item que você deseja retirar do estoque.");
+            let index = estoque.indexOf(removeItem);                                        // 
+            
+                if (index !== -1) {
+                    estoque.splice (index, 1);
+                    alert (`O item ${removeItem} foi excluido do estoque.`);
+
+                } else {
+                    alert (`O item ${removeItem} não foi encontrado no estoque, veja se está escrito corretamente ou digite outro.`);
+
+                }
+
+        } else if (opicao === "3") {
+            let listaItens = "";
+            estoque.forEach(function (item){
+                listaItens += item + "\n";
+            })
+            alert (`Itens que possui no estoque: \n ${listaItens}`);
+        } else if (opicao === "4") {
+            alert ("O programa foi finalizado.");
+            break;
+        } else {
+            alert ("Opção inválida. Tente uma outra.")
+        }
+    }
+    console.log (estoque);
+
+
+</script>
