@@ -4,9 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Estoque com JS</title>
 </head>
 <body>
+    <nav>
+        <div>
+            <button onclick="novoItem"> <h1> Entrada </h1> </button>
+            <button> <h1> Saída </h1> </button>
+            <button> <h1> Cancelar </h1> </button>
+            <button> <h1> Sair </h1> </button>
+        </div>
+    </nav>
+
+    <header>
+        <div>
+            <h2>ITENS EM ESTOQUE</h2>
+        </div>
+    </header>
+
+    <main>
+        <ul>
+            
+        </ul>
+    </main>
     
 </body>
 </html>
@@ -16,7 +36,7 @@
     let estoque = [];                                                                       //array para armazenar os itens do estoque
 
     while (true) {                                                                          // fazendo o looping ser infinito dizendo que ele é verdadeiro
-        let opicao = prompt ("Escolha uma das seguites opções: \n 1 - Adicionar um novo item. \n 2 - Remover um item. \n 3 - Exibir lista de items. \n 4 - Sair.");
+        // let opicao = prompt ("Escolha uma das seguites opções: \n 1 - Adicionar um novo item. \n 2 - Remover um item. \n 3 - Exibir lista de items. \n 4 - Sair.");
 
         if (opicao === "1") {                                                               // adicionando um novo item ao estoque
             let novoItem = prompt("Digite o nome do item que deseja adiconar ao estoque");
