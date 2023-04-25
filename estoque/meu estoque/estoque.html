@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estoque 1k bala</title>
+</head>
+<body>
+    <h1>Formulário de Cadastro de itens</h1>
+<!-- formulario de cadastro dos itens -->
+    <form id="formCadastro">
+    <!-- botões de ações -->
+        <tr>
+            <input type="submit" value="Entrada">
+            <input type="button" value="Saída">
+            <input type="button" value="Limpar" id="limpar">
+            <input type="button" value="Mostrar Estoque" id="btnEstoque">
+        </tr>
+    <br>
+        <tr>
+            <input type="text" id="nome" name="nome" placeholder="Nome">
+            <input type="text" id="valor" name="valor" placeholder="Valor">
+            <input type="text" id="quant" name="quantidade" placeholder="Quantidade">
+            <input type="date" id="dataEntrada" name="dataEntrada">
+        </tr>
+    </form>
+
+    <table id="tabela">
+        <thead>
+            <tr>
+                <th>Quantidade</th>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Data de Entrada</th>
+            </tr>
+        </thead>
+
+        <tbody>
+        </tbody>
+
+    </table>
+
+<script src="estoque.js"></script>
+</body>
+</html>
