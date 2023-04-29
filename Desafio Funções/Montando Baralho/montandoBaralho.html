@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRUCO</title>
+</head>
+<body>
+    
+    
+</body>
+</html>
+
+<script>  
+    function montarBaralho() {                                                                              // função para montar o baralho
+        const naipes = ['Paus', 'Ouros', 'Copas', 'Espadas'];                                               // valores da array de naipes
+        const valores = ['Ás', '2', '3', '4', '5', '6', '7', '8', '9', 'Valete', 'Rainha', 'Rei'];          // valores da array de valores
+        const baralho = [];                                                                                 // array para o baralho e si
+
+        for (const naipe of naipes) {                                                                       // for criando uma variavel chamada naipe com os valores que tem dentro da varivavel naipes (por isso o of)
+            for (const valor of valores) {                                                                  // for criando uma variavel chamada valor com os valores que tem dentro da varivavel valores (por isso o of)
+                const carta = {naipe, valor};                                                               // variavel carta que possui o naipe e o valor 
+                baralho.push(carta);
+            }
+        }
+        
+        return baralho[Math.floor(Math.random() * baralho.length)];
+    }
+
+    console.log(montarBaralho());
+    
+</script>
